@@ -1,23 +1,23 @@
 public class PC {
-    private String pcCase;
-    private String monitor;
-    private String motherboard;
+    private Case Case;
+    private Monitor monitor;
+    private Motherboard motherboard;
 
-    public PC(String pcCase, String monitor, String motherboard) {
-        this.pcCase = pcCase;
+    public PC(Case Case, Monitor monitor, Motherboard motherboard) {
+        this.Case = Case;
         this.monitor = monitor;
         this.motherboard = motherboard;
     }
 
-    private String getPcCase() {
-        return pcCase;
+    private Case getCase() {
+        return Case;
     }
 
-    private String getMonitor() {
+    private Monitor getMonitor() {
         return monitor;
     }
 
-    private String getMotherboard() {
+    private Motherboard getMotherboard() {
         return motherboard;
     }
 
@@ -30,15 +30,15 @@ public class PC {
     }
 
     public void poweUp(){
-        pcCase.pressPowerButton();
-        pcCase.drawLogo();
+        Case.pressPowerButton();
+        Case.drawLogo();
         motherboard.loadProgram();
     }
 
     @Override
     public String toString() {
         return "PC{" +
-                "pcCase='" + pcCase + '\'' +
+                "Case='" + Case + '\'' +
                 ", monitor='" + monitor + '\'' +
                 ", motherboard='" + motherboard + '\'' +
                 '}';
