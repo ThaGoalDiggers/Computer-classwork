@@ -26,7 +26,9 @@ public class PC {
     }
 
     public void description(){
-        System.out.println("The " + monitor + " looks like a large, thin flat-screen. " + "The " + pcCase + " looks like a large, black box with a transparent glass panel on the side. " + "The " + motherboard + " is an organized panel of components.");
+        System.out.println(Case.toString());
+        System.out.println(monitor.toString());
+        System.out.println(motherboard.toString());
     }
 
     public void poweUp(){
