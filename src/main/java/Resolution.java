@@ -1,10 +1,8 @@
-package resolutionMemem;
-
 public class Resolution {
 
     private int width;
     private int height;
-
+//test
     public Resolution(int width,int height){
         this.width = width;
         this.height = height;
