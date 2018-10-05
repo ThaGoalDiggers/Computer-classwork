@@ -1,16 +1,16 @@
 public class PC {
-    private Case Case;
+    private Case compCase;
     private Monitor monitor;
     private Motherboard motherboard;
 
     public PC(Case Case, Monitor monitor, Motherboard motherboard) {
-        this.Case = Case;
+        this.compCase = Case;
         this.monitor = monitor;
         this.motherboard = motherboard;
     }
 
     private Case getCase() {
-        return Case;
+        return compCase;
     }
 
     private Monitor getMonitor() {
@@ -22,25 +22,25 @@ public class PC {
     }
 
     private void drawLogo(){
-        monitor.drawPixel();
+        monitor.drawPixelAt(10,10,"Blue");
     }
 
     public void description(){
-        System.out.println(Case.toString());
+        System.out.println(compCase.toString());
         System.out.println(monitor.toString());
         System.out.println(motherboard.toString());
     }
 
-    public void poweUp(){
+    public void poweUp(String loadProgram){
         Case.pressPowerButton();
-        Case.drawLogo();
-        motherboard.loadProgram();
+        drawLogo();
+        motherboard.loadProgram(loadProgram);
     }
 
     @Override
     public String toString() {
         return "PC{" +
-                "Case='" + Case + '\'' +
+                "Case='" + compCase + '\'' +
                 ", monitor='" + monitor + '\'' +
                 ", motherboard='" + motherboard + '\'' +
                 '}';

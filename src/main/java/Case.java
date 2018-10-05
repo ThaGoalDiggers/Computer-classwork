@@ -11,7 +11,15 @@ public class Case {
 
     //testtest
 
-    public void pressPowerButton(){
+
+    public Case(String model, String manuFacturer, String powerSupply, Dimension dimension) {
+        this.model = model;
+        this.manuFacturer = manuFacturer;
+        this.powerSupply = powerSupply;
+        this.dimension = dimension;
+    }
+
+    public  static void pressPowerButton(){
         System.out.println("Power Button Pressed");
 
     }
