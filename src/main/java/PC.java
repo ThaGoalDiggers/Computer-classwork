@@ -25,8 +25,8 @@ public class PC {
         monitor.drawPixelAt(10,10,"Blue");
     }
 
-    public void description(){
-        System.out.println(compCase.toString());
+   public void description(){
+        System.out.println(Case.toString());
         System.out.println(monitor.toString());
         System.out.println(motherboard.toString());
     }
